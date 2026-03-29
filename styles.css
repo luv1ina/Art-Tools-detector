@@ -1,0 +1,183 @@
+
+html {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+/* TODO: Edit the properties below to customize your website! */
+body {
+  background-color: #0f172a;
+  color: #e5e7eb;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 20pt;
+  margin: 20px 50px 30px 50px;
+  color: #f472b6;
+}
+
+p {
+  width: 80%;
+  text-align: left;
+  margin: 10px 50px;
+}
+
+.bubble {
+  background-color: #1e293b;
+  border-radius: 12px;
+
+  width: 80%;
+  padding: 10px;
+  margin: 50px 0 10px 0;
+}
+
+/* Edit me to change the appearance of the button! */
+button {
+  font-size: 12pt;
+
+  background: linear-gradient(135deg, #c084fc, #f472b6);
+  color: white;
+  border: none;
+  border-radius: 8px;
+
+  width: 150px;
+  height: 50px;
+  margin: 20px 50px;
+
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #E879F9, #F472B6);
+  box-shadow: 0 0 12px rgba(232, 121, 249, 0.6);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: var(--input-focus-border);
+    font-family: 'Schoolbell', cursive;
+}
+
+footer .github-link {
+    color: #8e4792;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+footer .github-link:hover {
+    transform: rotate(-2deg) scale(1.1);
+}
+
+footer .heart {
+    color: #ff0000; 
+    font-family: 'Schoolbell', cursive;
+    animation: pulse 1.5s infinite;
+}
+
+/* The camera */
+#webcam-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* The labels */
+#label-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 12pt;
+
+  margin: 25px;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  cursor: url('Capture_d_écran_2026-03-29_182246-removebg-preview.png'), auto;
+}
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
+
+.cursor::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid gray;
+    border-radius: 50%;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid rgb(255, 0, 204);
+}
+
+p {
+  color: white;
+  font-family: 'arial';
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.4em;
+  
+  a {
+    color: teal;
+  }
+}
+
+
