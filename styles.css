@@ -180,4 +180,37 @@ p {
   }
 }
 
+/* Container to align them horizontally */
+.photo-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap; /* Allows stacking on small screens */
+}
 
+/* The Polaroid Frame */
+.polaroid-frame {
+  background-color: white;
+  padding: 15px 15px 40px 15px; /* Thicker bottom for that classic look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.polaroid-frame img {
+  width: 200px; /* Adjust size as needed */
+  height: 200px;
+  object-fit: cover; /* Keeps faces from looking squished */
+  display: block;
+}
+
+/* Specific rotations for the "scattered" look */
+.polaroid-frame:nth-child(1) { transform: rotate(-3deg); }
+.polaroid-frame:nth-child(2) { transform: rotate(2deg); }
+.polaroid-frame:nth-child(3) { transform: rotate(-1deg); }
+
+/* Hover effect to make it interactive */
+.polaroid-frame:hover {
+  transform: scale(1.05) rotate(0deg);
+  z-index: 10;
+}
